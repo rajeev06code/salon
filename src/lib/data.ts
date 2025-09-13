@@ -41,7 +41,6 @@ export const reviews: Review[] = [
 export const stylists: Stylist[] = [
   {
     id: 'stylist-1',
-    slug: 'olivia-chen',
     name: 'Olivia Chen',
     specialties: ['Creative Coloring', 'Modern Cuts', 'Bridal Updos'],
     experience: '10 years of transforming hair with artistry and passion.',
@@ -61,7 +60,6 @@ export const stylists: Stylist[] = [
   },
   {
     id: 'stylist-2',
-    slug: 'marcus-reid',
     name: 'Marcus Reid',
     specialties: ['Classic Barbering', 'Beard Sculpting', 'Hot Towel Shaves'],
     experience: "8 years of perfecting the art of men's grooming.",
@@ -81,7 +79,6 @@ export const stylists: Stylist[] = [
   },
   {
     id: 'stylist-3',
-    slug: 'isabella-garcia',
     name: 'Isabella Garcia',
     specialties: ['Balayage & Highlights', 'Long Hair Styling', 'Keratin Treatments'],
     experience: '7 years creating sun-kissed looks and healthy, flowing hair.',
@@ -92,7 +89,6 @@ export const stylists: Stylist[] = [
   },
   {
     id: 'stylist-4',
-    slug: 'liam-johnson',
     name: 'Liam Johnson',
     specialties: ["Men's Scissor Cuts", 'Styling Consultation', 'Grey Blending'],
     experience: '12 years of experience in both salon and barbershop environments.',

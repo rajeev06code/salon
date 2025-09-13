@@ -18,7 +18,6 @@ export interface Review {
 
 export interface Stylist {
   id: string;
-  slug: string;
   name: string;
   specialties: string[];
   experience: string;

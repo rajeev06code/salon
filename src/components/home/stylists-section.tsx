@@ -4,6 +4,7 @@ import { stylists } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import StylistDetails from './stylist-details';
 
 export default function StylistsSection() {
   return (
@@ -19,7 +20,7 @@ export default function StylistsSection() {
         </div>
         <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {stylists.map((stylist) => (
-            <Link key={stylist.id} href={`/stylists/${stylist.slug}`} className="group block">
+            <Link key={stylist.id} href={`#${stylist.id}`} className="group block">
               <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
                  <div className="relative h-96 w-full">
                   <Image
@@ -46,6 +47,14 @@ export default function StylistsSection() {
               </Card>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-24 space-y-24">
+            {stylists.map(stylist => (
+                <div id={stylist.id} key={stylist.id} className="scroll-mt-24">
+                    <StylistDetails stylist={stylist} />
+                </div>
+            ))}
         </div>
       </div>
     </section>
