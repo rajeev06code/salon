@@ -19,15 +19,14 @@ const Footer = () => {
           <div>
             <h3 className="font-headline text-lg font-semibold">Explore</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
-              <li><Link href="/stylists" className="text-muted-foreground hover:text-primary">Our Stylists</Link></li>
+              <li><Link href="/#services" className="text-muted-foreground hover:text-primary">Services</Link></li>
+              <li><Link href="/#stylists" className="text-muted-foreground hover:text-primary">Our Stylists</Link></li>
               <li><Link href="/#memberships" className="text-muted-foreground hover:text-primary">Memberships</Link></li>
               <li>
                 <BookingModal>
                    <button className="text-muted-foreground hover:text-primary text-sm">Book an Appointment</button>
                 </BookingModal>
               </li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
             </ul>
           </div>
           <div>

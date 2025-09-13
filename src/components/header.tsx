@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils';
 import BookingModal from './booking-modal';
 
 const navLinks = [
-  { href: '/services', label: 'Services' },
-  { href: '/stylists', label: 'Stylists' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#stylists', label: 'Stylists' },
+  { href: '/#memberships', label: 'Memberships' },
   { href: '/contact', label: 'Contact' },
 ];
 
