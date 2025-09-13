@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Gilded Mane. All rights reserved.</p>
            <p className="mt-2">
-            Designed by <a href="https://pixelbuilder.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">PixelBuilder</a>
+            Designed by <a href="https://pixelbuilders.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">PixelBuilder</a>
           </p>
         </div>
       </div>
