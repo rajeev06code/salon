@@ -1,17 +1,15 @@
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
 import BookingModal from '../booking-modal';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
 
 const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
     <Card id={service.id} className="w-full h-full overflow-hidden transition-all hover:shadow-lg bg-secondary/50 hover:bg-secondary/80">
         <div className="flex flex-col h-full">
-            <div className="relative h-32 w-full">
+            <div className="relative h-48 w-full">
                 <Image
                     src={service.imageUrl}
                     alt={service.name}
