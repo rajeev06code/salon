@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -64,7 +65,7 @@ export default function BookingPage() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-lg border bg-card p-8 shadow-sm">
+        <div className="mt-12 rounded-lg border bg-card p-4 md:p-8 shadow-sm">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -98,7 +99,7 @@ export default function BookingPage() {
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Select a stylist" />
-                          </SelectTrigger>
+                          </Trigger>
                         </FormControl>
                         <SelectContent>
                            <SelectItem value="any">Any Available</SelectItem>
