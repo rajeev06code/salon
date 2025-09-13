@@ -42,6 +42,10 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
 
 export default function ServicesSection() {
   const allServices = services;
+  const chunkedServices = [];
+  for (let i = 0; i < allServices.length; i += 2) {
+    chunkedServices.push(allServices.slice(i, i + 2));
+  }
 
   return (
     <section className="py-16 sm:py-24 bg-background">
@@ -76,11 +80,29 @@ export default function ServicesSection() {
                 </Carousel>
             </div>
 
-            {/* Grid for Desktop */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                 {allServices.map((service) => (
-                    <ServiceCard key={service.id} service={service} />
-                ))}
+            {/* 2-Row Carousel for Desktop */}
+            <div className="hidden md:block">
+                <Carousel
+                    opts={{
+                        align: "start",
+                        dragFree: true,
+                    }}
+                    className="w-full"
+                    >
+                    <CarouselContent className="-ml-1">
+                        {chunkedServices.map((chunk, index) => (
+                            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                                <div className="p-1 space-y-2">
+                                     {chunk.map(service => (
+                                        <ServiceCard key={service.id} service={service} />
+                                     ))}
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="-left-4" />
+                    <CarouselNext className="-right-4" />
+                </Carousel>
             </div>
         </div>
       </div>
