@@ -42,11 +42,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
 
 export default function ServicesSection() {
   const allServices = services;
-  const chunkedServices = [];
-  for (let i = 0; i < allServices.length; i += 2) {
-    chunkedServices.push(allServices.slice(i, i + 2));
-  }
-
+  
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -80,7 +76,7 @@ export default function ServicesSection() {
                 </Carousel>
             </div>
 
-            {/* 2-Row Carousel for Desktop */}
+            {/* 3-Column Carousel for Desktop */}
             <div className="hidden md:block">
                 <Carousel
                     opts={{
@@ -89,13 +85,11 @@ export default function ServicesSection() {
                     }}
                     className="w-full"
                     >
-                    <CarouselContent className="-ml-1">
-                        {chunkedServices.map((chunk, index) => (
-                            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-[45%]">
-                                <div className="p-1 space-y-2">
-                                     {chunk.map(service => (
-                                        <ServiceCard key={service.id} service={service} />
-                                     ))}
+                    <CarouselContent className="-ml-2">
+                        {allServices.map((service) => (
+                            <CarouselItem key={service.id} className="pl-2 md:basis-1/3 lg:basis-[30%]">
+                                <div className="p-1 h-full">
+                                    <ServiceCard service={service} />
                                 </div>
                             </CarouselItem>
                         ))}
