@@ -7,9 +7,9 @@ export default function Hero() {
     <section className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
              <Image
-                src="https://picsum.photos/seed/salon-interior/1800/1200"
-                alt="Stylish salon interior"
-                data-ai-hint="salon interior light"
+                src="https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg"
+                alt="Stylish salon interior with comfortable chairs"
+                data-ai-hint="salon interior chairs"
                 fill
                 className="object-cover opacity-80"
                 priority
