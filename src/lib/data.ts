@@ -295,34 +295,3 @@ export const categories: Category[] = [
     imageHint: 'oil bottle'
   }
 ];
-
-
-export const blogPosts = [
-  {
-    id: 1,
-    title: '5 Tips for Healthier, Shinier Hair',
-    date: 'October 26, 2023',
-    excerpt: 'Discover our stylists\' top secrets to maintaining salon-quality hair at home...',
-    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
-    imageHint: 'hair products',
-    slug: '/blog/healthier-hair-tips',
-  },
-  {
-    id: 2,
-    title: 'The Ultimate Guide to Beard Care',
-    date: 'October 22, 2023',
-    excerpt: 'From oils to balms, learn how to keep your beard looking its absolute best...',
-    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
-    imageHint: 'beard trim',
-    slug: '/blog/beard-care-guide',
-  },
-  {
-    id: 3,
-    title: 'Fall 2023 Hair Color Trends',
-    date: 'October 15, 2023',
-    excerpt: 'Thinking of a new look for the season? Here are the hottest color trends...',
-    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
-    imageHint: 'fashion style',
-    slug: '/blog/fall-color-trends',
-  },
-];

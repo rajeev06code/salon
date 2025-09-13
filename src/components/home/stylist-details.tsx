@@ -1,12 +1,12 @@
+
 'use server';
 
 import Image from 'next/image';
 import { type Stylist } from '@/lib/data';
-import { summarizeCustomerFeedback } from '@/ai/flows/summarize-customer-feedback';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Star, StarHalf, Calendar, Briefcase } from 'lucide-react';
-import BioGenerator from '@/components/stylists/bio-generator';
+import BioDisplay from '@/components/stylists/bio-display';
 import { Button } from '@/components/ui/button';
 import BookingModal from '@/components/booking-modal';
 
@@ -24,13 +24,6 @@ const renderStars = (rating: number) => {
   };
 
 export default async function StylistDetails({ stylist }: { stylist: Stylist }) {
-
-  const feedbackSummaryResult = stylist.reviews.length > 0
-    ? await summarizeCustomerFeedback({
-        stylistName: stylist.name,
-        customerReviews: stylist.reviews.map((r) => r.review),
-      })
-    : { summary: "No reviews available yet for an AI summary." };
 
   const averageRating = stylist.reviews.length > 0
     ? stylist.reviews.reduce((acc, r) => acc + r.rating, 0) / stylist.reviews.length
@@ -94,15 +87,15 @@ export default async function StylistDetails({ stylist }: { stylist: Stylist }) 
           </div>
           
           <div className="md:col-span-2 space-y-8">
-            <BioGenerator stylist={stylist} />
+            <BioDisplay stylist={stylist} />
             
             <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Customer Feedback Summary</CardTitle>
-                    <CardDescription>An AI-generated summary of what clients are saying.</CardDescription>
+                    <CardTitle className="font-headline text-2xl">Customer Feedback</CardTitle>
+                    <CardDescription>What our clients are saying.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-muted-foreground italic">&quot;{feedbackSummaryResult.summary}&quot;</p>
+                    <p className="text-muted-foreground italic">&quot;Read what our clients have to say about {stylist.name}!&quot;</p>
                 </CardContent>
             </Card>
 
