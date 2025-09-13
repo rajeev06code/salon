@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -81,13 +82,13 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
       </DialogTrigger>
       <DialogContent className="max-w-4xl p-0">
         <div className="grid md:grid-cols-2">
-            <div className="relative h-64 md:h-auto order-first">
+            <div className="relative hidden h-full md:h-auto md:block">
                 <Image 
                     src="https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg"
                     alt="Woman receiving beauty treatment"
                     data-ai-hint="facial treatment"
                     fill
-                    className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                    className="object-cover rounded-l-lg"
                 />
             </div>
             <div className="p-8">
