@@ -77,7 +77,7 @@ export default function StylistsSection() {
                     >
                     <CarouselContent className="-ml-2">
                         {stylists.map((stylist) => (
-                            <CarouselItem key={stylist.id} className="pl-2 md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={stylist.id} className="pl-2 md:basis-1/3">
                                 <div className="p-1">
                                      <Link href={`#${stylist.id}`} className="group block h-full">
                                         <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
@@ -95,7 +95,7 @@ export default function StylistsSection() {
                                             </CardHeader>
                                             <CardContent className="flex-grow text-center px-4 pb-2">
                                                 <div className="flex flex-wrap justify-center gap-1">
-                                                    {stylist.specialties.slice(0, 2).map((spec) => (
+                                                    {stylist.specialties.slice(0, 3).map((spec) => (
                                                     <Badge key={spec} variant="secondary" className="text-xs">{spec}</Badge>
                                                     ))}
                                                 </div>
