@@ -35,7 +35,7 @@ const ServiceCard = ({ service }: { service: Service }) => (
             </div>
             <CardFooter className="p-0 mt-4 flex justify-between items-center">
                 <div>
-                    <span className="font-semibold text-2xl text-primary">₹{service.price}</span>
+                    <span className="font-semibold text-2xl text-primary">Rs. {service.price}</span>
                     <span className="text-sm text-muted-foreground ml-2">/ {service.duration} min</span>
                 </div>
                 <BookingModal>

@@ -8,7 +8,7 @@ const membershipPlans = [
     name: 'Gilded Member',
     price: '99',
     features: [
-      'Two services of your choice per month (up to ₹85 value each)',
+      'Two services of your choice per month (up to Rs. 85 value each)',
       '10% off all additional services',
       '10% off all retail products',
       'Priority booking',
@@ -19,7 +19,7 @@ const membershipPlans = [
     name: 'Golden VIP',
     price: '189',
     features: [
-      'Four services of your choice per month (up to ₹85 value each)',
+      'Four services of your choice per month (up to Rs. 85 value each)',
       '15% off all additional services',
       '15% off all retail products',
       'Priority booking & dedicated concierge',
@@ -62,7 +62,7 @@ export default function MembershipsSection() {
                             <CardHeader className="p-8">
                                 <CardTitle className="font-headline text-3xl text-primary">{plan.name}</CardTitle>
                                 <div className="mt-4 flex items-baseline text-foreground">
-                                    <span className="text-5xl font-bold tracking-tight">₹{plan.price}</span>
+                                    <span className="text-5xl font-bold tracking-tight">Rs. {plan.price}</span>
                                     <span className="ml-1 text-xl font-semibold text-muted-foreground">/month</span>
                                 </div>
                                 <CardDescription className="mt-2 h-12">For the discerning individual who values consistency and quality.</CardDescription>

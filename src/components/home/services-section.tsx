@@ -38,7 +38,7 @@ export default function ServicesSection() {
                 <p className="text-sm text-muted-foreground">{service.description}</p>
               </CardContent>
               <CardFooter className="flex justify-between items-center">
-                <span className="font-semibold text-lg text-primary">₹{service.price}</span>
+                <span className="font-semibold text-lg text-primary">Rs. {service.price}</span>
                 <Button variant="ghost" size="sm" asChild>
                   <Link href={`/services#${service.id}`}>
                     Details <ArrowRight className="ml-2 h-4 w-4" />
