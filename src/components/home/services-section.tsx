@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/data';
@@ -22,88 +23,52 @@ export default function ServicesSection() {
           </p>
         </div>
         <div className="mt-12">
-            <div className="hidden md:block">
-                <Carousel
-                    opts={{
-                    align: "start",
-                    dragFree: true,
-                    }}
-                    className="w-full"
-                >
-                    <CarouselContent>
-                    {allServices.map((service) => (
-                        <CarouselItem key={service.id} className="basis-1/2 lg:basis-1/3">
-                            <div className="p-1">
-                                 <Card id={service.id} className="w-full overflow-hidden transition-all hover:shadow-lg bg-secondary/50 hover:bg-secondary/80">
-                                    <div className="flex flex-col h-full">
-                                        <div className="relative h-40 w-full">
-                                            <Image
-                                                src={service.imageUrl}
-                                                alt={service.name}
-                                                data-ai-hint={service.imageHint}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                        <div className="flex flex-1 flex-col justify-between p-4">
-                                            <div>
-                                                <CardTitle className="font-headline text-xl">{service.name}</CardTitle>
-                                                <CardContent className="p-0 mt-2">
-                                                    <p className="text-muted-foreground text-sm whitespace-normal">{service.description}</p>
-                                                </CardContent>
-                                            </div>
-                                            <CardFooter className="p-0 mt-4 flex justify-between items-center">
-                                                <div>
-                                                    <span className="font-semibold text-xl text-primary">Rs. {service.price}</span>
-                                                    <span className="text-xs text-muted-foreground ml-2">/ {service.duration} min</span>
-                                                </div>
-                                                <BookingModal>
-                                                    <Button size="sm">Book Now</Button>
-                                                </BookingModal>
-                                            </CardFooter>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </div>
-                        </CarouselItem>
-                    ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="-left-4" />
-                    <CarouselNext className="-right-4" />
-                </Carousel>
-            </div>
-            <div className="mt-12 grid gap-8 sm:grid-cols-1 md:hidden">
+            <Carousel
+                opts={{
+                align: "start",
+                dragFree: true,
+                }}
+                className="w-full"
+            >
+                <CarouselContent className="md:-ml-2 md:grid md:grid-flow-col-dense md:grid-rows-2">
                 {allServices.map((service) => (
-                    <Card key={service.id} id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg bg-secondary/50 hover:bg-secondary/80">
-                        <div className="relative h-48 md:h-auto md:w-1/3 lg:w-2/5">
-                        <Image
-                            src={service.imageUrl}
-                            alt={service.name}
-                            data-ai-hint={service.imageHint}
-                            fill
-                            className="object-cover"
-                        />
-                        </div>
-                        <div className="flex flex-1 flex-col justify-between p-6">
-                            <div>
-                                <CardTitle className="font-headline text-2xl">{service.name}</CardTitle>
-                                <CardContent className="p-0 mt-2">
-                                    <p className="text-muted-foreground">{service.description}</p>
-                                </CardContent>
-                            </div>
-                            <CardFooter className="p-0 mt-4 flex justify-between items-center">
-                                <div>
-                                    <span className="font-semibold text-2xl text-primary">Rs. {service.price}</span>
-                                    <span className="text-sm text-muted-foreground ml-2">/ {service.duration} min</span>
+                    <CarouselItem key={service.id} className="basis-4/5 sm:basis-1/2 md:basis-1/2 lg:basis-1/3 md:p-2">
+                         <Card id={service.id} className="w-full h-full overflow-hidden transition-all hover:shadow-lg bg-secondary/50 hover:bg-secondary/80">
+                            <div className="flex flex-col h-full">
+                                <div className="relative h-32 w-full">
+                                    <Image
+                                        src={service.imageUrl}
+                                        alt={service.name}
+                                        data-ai-hint={service.imageHint}
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
-                                <BookingModal>
-                                    <Button>Book Now</Button>
-                                </BookingModal>
-                            </CardFooter>
-                        </div>
-                  </Card>
+                                <div className="flex flex-1 flex-col justify-between p-4">
+                                    <div>
+                                        <CardTitle className="font-headline text-lg">{service.name}</CardTitle>
+                                        <CardContent className="p-0 mt-1">
+                                            <p className="text-muted-foreground text-sm line-clamp-2">{service.description}</p>
+                                        </CardContent>
+                                    </div>
+                                    <CardFooter className="p-0 mt-4 flex justify-between items-center">
+                                        <div>
+                                            <span className="font-semibold text-lg text-primary">Rs. {service.price}</span>
+                                            <span className="text-xs text-muted-foreground ml-2">/ {service.duration} min</span>
+                                        </div>
+                                        <BookingModal>
+                                            <Button size="sm">Book Now</Button>
+                                        </BookingModal>
+                                    </CardFooter>
+                                </div>
+                            </div>
+                        </Card>
+                    </CarouselItem>
                 ))}
-            </div>
+                </CarouselContent>
+                <CarouselPrevious className="-left-4 hidden md:flex" />
+                <CarouselNext className="-right-4 hidden md:flex" />
+            </Carousel>
         </div>
       </div>
     </section>
