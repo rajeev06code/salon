@@ -91,7 +91,7 @@ export default function ServicesSection() {
                     >
                     <CarouselContent className="-ml-1">
                         {chunkedServices.map((chunk, index) => (
-                            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-[45%]">
                                 <div className="p-1 space-y-2">
                                      {chunk.map(service => (
                                         <ServiceCard key={service.id} service={service} />
