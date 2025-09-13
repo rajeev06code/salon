@@ -4,7 +4,7 @@ export interface Service {
   description: string;
   price: number;
   duration: number; // in minutes
-  category: 'men' | 'women' | 'unisex';
+  categoryIds: string[];
   imageUrl: string;
   imageHint: string;
 }
@@ -26,4 +26,11 @@ export interface Stylist {
   imageUrl: string;
   imageHint: string;
   reviews: Review[];
+}
+
+export interface Category {
+    id: string;
+    name: string;
+    imageUrl: string;
+    imageHint: string;
 }

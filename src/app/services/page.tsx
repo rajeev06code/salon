@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
-    <Card id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg">
+    <Card id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg bg-secondary/50 hover:bg-secondary/80">
         <div className="relative h-48 md:h-auto md:w-1/3 lg:w-2/5">
         <Image
             src={service.imageUrl}
@@ -42,8 +42,8 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
 );
 
 export default function ServicesPage() {
-  const womenServices = services.filter(s => s.category === 'women' || s.category === 'unisex');
-  const menServices = services.filter(s => s.category === 'men' || s.category === 'unisex');
+  const womenServices = services.filter(s => s.categoryIds.includes('hair') || s.categoryIds.includes('coloring') || s.categoryIds.includes('beauty'));
+  const menServices = services.filter(s => s.categoryIds.includes('barbering') || s.categoryIds.includes('hair'));
   
   return (
     <div className="bg-background">

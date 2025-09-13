@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Scissors, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -11,13 +11,15 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/stylists', label: 'Stylists' },
+  { href: '/memberships', label: 'Memberships' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
-const NavLink = ({ href, label, className }: { href: string; label: string; className?: string }) => (
+const NavLink = ({ href, label, className, onClick }: { href: string; label: string; className?: string, onClick?: () => void; }) => (
   <Link
     href={href}
+    onClick={onClick}
     className={cn('text-foreground/80 transition-colors hover:text-primary', className)}
   >
     {label}

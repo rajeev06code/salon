@@ -1,4 +1,4 @@
-import { type Stylist, type Service, type Review } from '@/lib/types';
+import { type Stylist, type Service, type Review, type Category } from '@/lib/types';
 
 export const reviews: Review[] = [
   {
@@ -110,7 +110,7 @@ export const services: Service[] = [
     description: 'A customized haircut followed by a professional blowout and style.',
     price: 85,
     duration: 60,
-    category: 'women',
+    categoryIds: ['hair'],
     imageUrl: 'https://picsum.photos/seed/women-haircut/600/400',
     imageHint: 'woman haircut',
   },
@@ -120,7 +120,7 @@ export const services: Service[] = [
     description: 'Precision haircut, shampoo, scalp massage, and style.',
     price: 50,
     duration: 45,
-    category: 'men',
+    categoryIds: ['hair', 'barbering'],
     imageUrl: 'https://picsum.photos/seed/men-haircut/600/400',
     imageHint: 'man haircut',
   },
@@ -130,7 +130,7 @@ export const services: Service[] = [
     description: 'Hand-painted highlights for a natural, sun-kissed look.',
     price: 250,
     duration: 180,
-    category: 'women',
+    categoryIds: ['hair', 'coloring'],
     imageUrl: 'https://picsum.photos/seed/hair-coloring/600/400',
     imageHint: 'hair coloring',
   },
@@ -140,7 +140,7 @@ export const services: Service[] = [
     description: 'Expert shaping and trimming of your beard, finished with beard oil.',
     price: 35,
     duration: 30,
-    category: 'men',
+    categoryIds: ['barbering'],
     imageUrl: 'https://picsum.photos/seed/beard-trim/600/400',
     imageHint: 'beard trim',
   },
@@ -150,7 +150,7 @@ export const services: Service[] = [
     description: 'Includes nail shaping, cuticle care, massage, and polish.',
     price: 40,
     duration: 45,
-    category: 'unisex',
+    categoryIds: ['beauty'],
     imageUrl: 'https://picsum.photos/seed/manicure-service/600/400',
     imageHint: 'manicure nails',
   },
@@ -160,11 +160,80 @@ export const services: Service[] = [
     description: 'A custom facial treatment to cleanse, exfoliate, and nourish your skin.',
     price: 120,
     duration: 60,
-    category: 'unisex',
+    categoryIds: ['beauty', 'skin'],
     imageUrl: 'https://picsum.photos/seed/facial-treatment/600/400',
     imageHint: 'facial treatment',
   },
+  {
+    id: 'service-7',
+    name: "Single Process Color",
+    description: "All-over color application for a rich, uniform look.",
+    price: 110,
+    duration: 120,
+    categoryIds: ['hair', 'coloring'],
+    imageUrl: "https://picsum.photos/seed/hair-color-single/600/400",
+    imageHint: "hair dye application"
+  },
+  {
+    id: 'service-8',
+    name: "Hot Towel Shave",
+    description: "A classic straight-razor shave with hot towels and rich lather.",
+    price: 45,
+    duration: 45,
+    categoryIds: ['barbering'],
+    imageUrl: "https://picsum.photos/seed/hot-towel-shave/600/400",
+    imageHint: "shaving hot towel"
+  },
+  {
+    id: 'service-9',
+    name: "Luxury Pedicure",
+    description: "A pampering pedicure with scrub, mask, massage, and polish.",
+    price: 65,
+    duration: 60,
+    categoryIds: ['beauty'],
+    imageUrl: "https://picsum.photos/seed/pedicure-spa/600/400",
+    imageHint: "pedicure spa"
+  },
+  {
+    id: 'service-10',
+    name: "Chemical Peel",
+    description: "An advanced exfoliation treatment to improve skin texture and tone.",
+    price: 150,
+    duration: 60,
+    categoryIds: ['skin'],
+    imageUrl: "https://picsum.photos/seed/chemical-peel-face/600/400",
+    imageHint: "facial peel"
+  }
 ];
+
+
+export const categories: Category[] = [
+  {
+    id: 'hair',
+    name: 'Hair',
+    imageUrl: 'https://picsum.photos/seed/category-hair/400/500',
+    imageHint: 'woman long hair'
+  },
+  {
+    id: 'coloring',
+    name: 'Coloring',
+    imageUrl: 'https://picsum.photos/seed/category-coloring/400/500',
+    imageHint: 'hair dye brush'
+  },
+  {
+    id: 'barbering',
+    name: 'Barbering',
+    imageUrl: 'https://picsum.photos/seed/category-barber/400/500',
+    imageHint: 'barber tools'
+  },
+  {
+    id: 'beauty',
+    name: 'Beauty',
+    imageUrl: 'https://picsum.photos/seed/category-beauty/400/500',
+    imageHint: 'makeup brushes'
+  }
+];
+
 
 export const blogPosts = [
   {

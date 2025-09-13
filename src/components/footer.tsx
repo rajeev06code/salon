@@ -6,7 +6,7 @@ import WhatsAppIcon from './icons/whatsapp-icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-card text-card-foreground">
+    <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
@@ -20,6 +20,7 @@ const Footer = () => {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
               <li><Link href="/stylists" className="text-muted-foreground hover:text-primary">Our Stylists</Link></li>
+               <li><Link href="/memberships" className="text-muted-foreground hover:text-primary">Memberships</Link></li>
               <li><Link href="/book" className="text-muted-foreground hover:text-primary">Book an Appointment</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
             </ul>
