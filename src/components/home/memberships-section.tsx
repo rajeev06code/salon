@@ -26,6 +26,7 @@ const membershipPlans = [
       'Complimentary beverage with each visit',
     ],
     cta: 'Go for Gold',
+    isFeatured: true,
   },
   {
     name: 'Platinum Elite',
@@ -57,8 +58,8 @@ export default function MembershipsSection() {
 
                 <div className="mt-16 grid max-w-lg gap-8 mx-auto lg:max-w-none lg:grid-cols-3">
                     {membershipPlans.map((plan) => (
-                        <Card key={plan.name} className="flex flex-col overflow-hidden border-primary/20 shadow-lg shadow-primary/10 transition-all hover:scale-105 hover:shadow-primary/20">
-                            <CardHeader className="p-8 bg-secondary">
+                        <Card key={plan.name} className={`flex flex-col overflow-hidden shadow-lg transition-all hover:-translate-y-2 ${plan.isFeatured ? 'border-primary border-2' : ''}`}>
+                            <CardHeader className="p-8">
                                 <CardTitle className="font-headline text-3xl text-primary">{plan.name}</CardTitle>
                                 <div className="mt-4 flex items-baseline text-foreground">
                                     <span className="text-5xl font-bold tracking-tight">${plan.price}</span>
@@ -78,7 +79,7 @@ export default function MembershipsSection() {
                             </CardContent>
                              <CardFooter className="p-8">
                                 <BookingModal>
-                                    <Button size="lg" className="w-full">{plan.cta}</Button>
+                                    <Button size="lg" className="w-full" variant={plan.isFeatured ? 'default' : 'outline'}>{plan.cta}</Button>
                                 </BookingModal>
                             </CardFooter>
                         </Card>

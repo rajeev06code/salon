@@ -14,9 +14,10 @@ import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { ScrollArea } from '../ui/scroll-area';
 import BookingModal from '../booking-modal';
+import { ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ service }: { service: Service }) => (
-    <Card id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg bg-secondary">
+    <Card id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg bg-card hover:bg-muted/50">
         <div className="relative h-48 md:h-auto md:w-1/3 lg:w-2/5">
         <Image
             src={service.imageUrl}
@@ -67,7 +68,7 @@ export default function CategoriesSection() {
             Find the perfect treatment to elevate your style.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4 lg:gap-6">
           {categories.map((category) => (
             <div
               key={category.id}
@@ -79,14 +80,19 @@ export default function CategoriesSection() {
                 alt={category.name}
                 data-ai-hint={category.imageHint}
                 width={400}
-                height={500}
+                height={400}
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/50 transition-colors group-hover:bg-black/60"></div>
-              <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
+              <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/60"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h3 className="font-headline text-2xl font-bold text-white">
                   {category.name}
                 </h3>
+                <div className="mt-2 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="inline-flex items-center rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-primary-foreground">
+                    View <ArrowRight className="ml-1 h-4 w-4" />
+                  </span>
+                </div>
               </div>
             </div>
           ))}
