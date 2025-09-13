@@ -13,7 +13,7 @@ import { categories, services } from '@/lib/data';
 import type { Service } from '@/lib/types';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import { ScrollArea } from '../ui/scroll-area';
+import { ScrollArea, ScrollBar } from '../ui/scroll-area';
 import BookingModal from '../booking-modal';
 
 const ServiceCard = ({ service }: { service: Service }) => (
@@ -71,12 +71,12 @@ export default function CategoriesSection() {
         </div>
         <div className="mt-12">
             <div className="sm:hidden">
-                 <ScrollArea className="w-full">
-                    <div className="flex gap-x-4 pb-4">
+                 <ScrollArea className="w-full whitespace-nowrap">
+                    <div className="flex w-max space-x-4 pb-4">
                         {categories.map((category) => (
                             <div
                             key={category.id}
-                            className="group flex flex-col items-center gap-2 cursor-pointer flex-shrink-0 w-24"
+                            className="group inline-flex flex-col items-center gap-2 cursor-pointer w-24"
                             onClick={() => setSelectedCategory(category)}
                             >
                             <div
@@ -92,12 +92,13 @@ export default function CategoriesSection() {
                                 />
                                 <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/40"></div>
                             </div>
-                            <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors">
+                            <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors whitespace-normal">
                                 {category.name}
                                 </h3>
                             </div>
                         ))}
                     </div>
+                    <ScrollBar orientation="horizontal" />
                 </ScrollArea>
             </div>
             <div className="hidden sm:grid sm:grid-cols-5 sm:gap-y-8 sm:justify-items-center">
@@ -153,4 +154,5 @@ export default function CategoriesSection() {
     </section>
   );
 }
+
 
