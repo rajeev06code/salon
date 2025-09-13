@@ -46,7 +46,7 @@ export const stylists: Stylist[] = [
     specialties: ['Creative Coloring', 'Modern Cuts', 'Bridal Updos'],
     experience: '10 years of transforming hair with artistry and passion.',
     bio: 'With a decade of experience, Olivia is a master of her craft, specializing in vibrant, creative color and chic, modern hairstyles. Her passion is helping clients express their personality through their hair, leaving them feeling beautiful and confident.',
-    imageUrl: 'https://picsum.photos/seed/olivia-chen/400/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'professional portrait',
     reviews: [
       reviews[0],
@@ -66,7 +66,7 @@ export const stylists: Stylist[] = [
     specialties: ['Classic Barbering', 'Beard Sculpting', 'Hot Towel Shaves'],
     experience: "8 years of perfecting the art of men's grooming.",
     bio: 'Marcus is a traditional barber with a modern edge. He excels in classic cuts, precision fades, and expert beard sculpting. For Marcus, grooming is an art form and a ritual, ensuring every client leaves looking sharp and feeling refreshed.',
-    imageUrl: 'https://picsum.photos/seed/marcus-reid/400/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'male portrait',
     reviews: [
       reviews[1],
@@ -86,7 +86,7 @@ export const stylists: Stylist[] = [
     specialties: ['Balayage & Highlights', 'Long Hair Styling', 'Keratin Treatments'],
     experience: '7 years creating sun-kissed looks and healthy, flowing hair.',
     bio: "Isabella's specialty is creating natural, dimensional color that looks effortlessly beautiful. From subtle highlights to dramatic balayage, she has a keen eye for what complements her clients' features, all while prioritizing hair health.",
-    imageUrl: 'https://picsum.photos/seed/isabella-garcia/400/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'woman smiling',
     reviews: [reviews[2]],
   },
@@ -97,7 +97,7 @@ export const stylists: Stylist[] = [
     specialties: ["Men's Scissor Cuts", 'Styling Consultation', 'Grey Blending'],
     experience: '12 years of experience in both salon and barbershop environments.',
     bio: "A versatile and experienced stylist, Liam is comfortable with all hair types and styles. He is particularly skilled in men's scissor cuts and provides excellent consultations to help clients find their perfect, low-maintenance look.",
-    imageUrl: 'https://picsum.photos/seed/liam-johnson/400/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'professional man',
     reviews: [reviews[3]],
   },
@@ -111,7 +111,7 @@ export const services: Service[] = [
     price: 85,
     duration: 60,
     categoryIds: ['hair'],
-    imageUrl: 'https://picsum.photos/seed/women-haircut/600/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'woman haircut',
   },
   {
@@ -121,7 +121,7 @@ export const services: Service[] = [
     price: 50,
     duration: 45,
     categoryIds: ['hair', 'barbering'],
-    imageUrl: 'https://picsum.photos/seed/men-haircut/600/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'man haircut',
   },
   {
@@ -131,7 +131,7 @@ export const services: Service[] = [
     price: 250,
     duration: 180,
     categoryIds: ['hair', 'coloring'],
-    imageUrl: 'https://picsum.photos/seed/hair-coloring/600/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'hair coloring',
   },
   {
@@ -141,7 +141,7 @@ export const services: Service[] = [
     price: 35,
     duration: 30,
     categoryIds: ['barbering'],
-    imageUrl: 'https://picsum.photos/seed/beard-trim/600/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'beard trim',
   },
   {
@@ -151,7 +151,7 @@ export const services: Service[] = [
     price: 40,
     duration: 45,
     categoryIds: ['nails', 'beauty'],
-    imageUrl: 'https://picsum.photos/seed/manicure-service/600/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'manicure nails',
   },
   {
@@ -161,7 +161,7 @@ export const services: Service[] = [
     price: 120,
     duration: 60,
     categoryIds: ['skin', 'beauty'],
-    imageUrl: 'https://picsum.photos/seed/facial-treatment/600/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'facial treatment',
   },
   {
@@ -171,7 +171,7 @@ export const services: Service[] = [
     price: 110,
     duration: 120,
     categoryIds: ['hair', 'coloring'],
-    imageUrl: "https://picsum.photos/seed/hair-color-single/600/400",
+    imageUrl: "https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg",
     imageHint: "hair dye application"
   },
   {
@@ -181,7 +181,7 @@ export const services: Service[] = [
     price: 45,
     duration: 45,
     categoryIds: ['barbering'],
-    imageUrl: "https://picsum.photos/seed/hot-towel-shave/600/400",
+    imageUrl: "https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg",
     imageHint: "shaving hot towel"
   },
   {
@@ -191,7 +191,7 @@ export const services: Service[] = [
     price: 65,
     duration: 60,
     categoryIds: ['nails', 'beauty'],
-    imageUrl: "https://picsum.photos/seed/pedicure-spa/600/400",
+    imageUrl: "https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg",
     imageHint: "pedicure spa"
   },
   {
@@ -201,7 +201,7 @@ export const services: Service[] = [
     price: 150,
     duration: 60,
     categoryIds: ['skin'],
-    imageUrl: "https://picsum.photos/seed/chemical-peel-face/600/400",
+    imageUrl: "https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg",
     imageHint: "facial peel"
   },
   {
@@ -211,7 +211,7 @@ export const services: Service[] = [
     price: 25,
     duration: 20,
     categoryIds: ['waxing'],
-    imageUrl: "https://picsum.photos/seed/eyebrow-waxing/600/400",
+    imageUrl: "https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg",
     imageHint: "eyebrow waxing"
   },
   {
@@ -221,7 +221,7 @@ export const services: Service[] = [
     price: 450,
     duration: 240,
     categoryIds: ['bridal', 'makeup', 'hair'],
-    imageUrl: "https://picsum.photos/seed/bridal-makeup/600/400",
+    imageUrl: "https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg",
     imageHint: "bride makeup"
   },
   {
@@ -231,7 +231,7 @@ export const services: Service[] = [
     price: 60,
     duration: 45,
     categoryIds: ['treatments', 'hair'],
-    imageUrl: "https://picsum.photos/seed/hair-mask/600/400",
+    imageUrl: "https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg",
     imageHint: "hair mask"
   }
 ];
@@ -241,61 +241,61 @@ export const categories: Category[] = [
   {
     id: 'hair',
     name: 'Haircuts',
-    imageUrl: 'https://picsum.photos/seed/category-hair/400/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'woman long hair'
   },
   {
     id: 'coloring',
     name: 'Coloring',
-    imageUrl: 'https://picsum.photos/seed/category-coloring/400/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'hair dye brush'
   },
   {
     id: 'barbering',
     name: 'Barbering',
-    imageUrl: 'https://picsum.photos/seed/category-barber/400/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'barber tools'
   },
   {
     id: 'beauty',
     name: 'Beauty',
-    imageUrl: 'https://picsum.photos/seed/category-beauty/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'makeup brushes'
   },
   {
     id: 'skin',
     name: 'Skin Care',
-    imageUrl: 'https://picsum.photos/seed/category-skin/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'facial cream'
   },
   {
     id: 'nails',
     name: 'Nails',
-    imageUrl: 'https://picsum.photos/seed/category-nails/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'nail polish'
   },
   {
     id: 'waxing',
     name: 'Waxing',
-    imageUrl: 'https://picsum.photos/seed/category-waxing/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'hot wax'
   },
   {
     id: 'makeup',
     name: 'Makeup',
-    imageUrl: 'https://picsum.photos/seed/category-makeup/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'makeup palette'
   },
   {
     id: 'bridal',
     name: 'Bridal',
-    imageUrl: 'https://picsum.photos/seed/category-bridal/400/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'wedding dress'
   },
   {
     id: 'treatments',
     name: 'Treatments',
-    imageUrl: 'https://picsum.photos/seed/category-treatments/400/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'oil bottle'
   }
 ];
@@ -307,7 +307,7 @@ export const blogPosts = [
     title: '5 Tips for Healthier, Shinier Hair',
     date: 'October 26, 2023',
     excerpt: 'Discover our stylists\' top secrets to maintaining salon-quality hair at home...',
-    imageUrl: 'https://picsum.photos/seed/hair-products/600/400',
+    imageUrl: 'https://images.pexels.com/photos/696285/pexels-photo-696285.jpeg',
     imageHint: 'hair products',
     slug: '/blog/healthier-hair-tips',
   },
@@ -316,7 +316,7 @@ export const blogPosts = [
     title: 'The Ultimate Guide to Beard Care',
     date: 'October 22, 2023',
     excerpt: 'From oils to balms, learn how to keep your beard looking its absolute best...',
-    imageUrl: 'https://picsum.photos/seed/beard-trim/600/400',
+    imageUrl: 'https://images.pexels.com/photos/973401/pexels-photo-973401.jpeg',
     imageHint: 'beard trim',
     slug: '/blog/beard-care-guide',
   },
@@ -325,7 +325,7 @@ export const blogPosts = [
     title: 'Fall 2023 Hair Color Trends',
     date: 'October 15, 2023',
     excerpt: 'Thinking of a new look for the season? Here are the hottest color trends...',
-    imageUrl: 'https://picsum.photos/seed/seasonal-style/600/400',
+    imageUrl: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg',
     imageHint: 'fashion style',
     slug: '/blog/fall-color-trends',
   },
