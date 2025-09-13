@@ -92,7 +92,7 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
                     className="object-cover rounded-l-lg"
                 />
             </div>
-            <div className="p-8">
+            <div className="py-8 px-6">
                 <ScrollArea className="h-full max-h-[85vh] pr-6">
                     <DialogHeader>
                     <DialogTitle className="font-headline text-3xl text-primary">Book Your Appointment</DialogTitle>
