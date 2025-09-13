@@ -150,7 +150,7 @@ export const services: Service[] = [
     description: 'Includes nail shaping, cuticle care, massage, and polish.',
     price: 40,
     duration: 45,
-    categoryIds: ['beauty'],
+    categoryIds: ['nails', 'beauty'],
     imageUrl: 'https://picsum.photos/seed/manicure-service/600/400',
     imageHint: 'manicure nails',
   },
@@ -160,7 +160,7 @@ export const services: Service[] = [
     description: 'A custom facial treatment to cleanse, exfoliate, and nourish your skin.',
     price: 120,
     duration: 60,
-    categoryIds: ['beauty', 'skin'],
+    categoryIds: ['skin', 'beauty'],
     imageUrl: 'https://picsum.photos/seed/facial-treatment/600/400',
     imageHint: 'facial treatment',
   },
@@ -190,7 +190,7 @@ export const services: Service[] = [
     description: "A pampering pedicure with scrub, mask, massage, and polish.",
     price: 65,
     duration: 60,
-    categoryIds: ['beauty'],
+    categoryIds: ['nails', 'beauty'],
     imageUrl: "https://picsum.photos/seed/pedicure-spa/600/400",
     imageHint: "pedicure spa"
   },
@@ -203,6 +203,36 @@ export const services: Service[] = [
     categoryIds: ['skin'],
     imageUrl: "https://picsum.photos/seed/chemical-peel-face/600/400",
     imageHint: "facial peel"
+  },
+  {
+    id: 'service-11',
+    name: "Eyebrow Waxing",
+    description: "Professional eyebrow shaping and waxing for a clean, defined look.",
+    price: 25,
+    duration: 20,
+    categoryIds: ['waxing'],
+    imageUrl: "https://picsum.photos/seed/eyebrow-waxing/600/400",
+    imageHint: "eyebrow waxing"
+  },
+  {
+    id: 'service-12',
+    name: "Bridal Hair & Makeup",
+    description: "Complete hair and makeup services for your special day. Includes trial.",
+    price: 450,
+    duration: 240,
+    categoryIds: ['bridal', 'makeup', 'hair'],
+    imageUrl: "https://picsum.photos/seed/bridal-makeup/600/400",
+    imageHint: "bride makeup"
+  },
+  {
+    id: 'service-13',
+    name: "Deep Conditioning Treatment",
+    description: "An intensive treatment to restore moisture, strength, and shine to your hair.",
+    price: 60,
+    duration: 45,
+    categoryIds: ['treatments', 'hair'],
+    imageUrl: "https://picsum.photos/seed/hair-mask/600/400",
+    imageHint: "hair mask"
   }
 ];
 
@@ -210,27 +240,63 @@ export const services: Service[] = [
 export const categories: Category[] = [
   {
     id: 'hair',
-    name: 'Hair',
-    imageUrl: 'https://picsum.photos/seed/category-hair/400/500',
+    name: 'Haircuts',
+    imageUrl: 'https://picsum.photos/seed/category-hair/400/400',
     imageHint: 'woman long hair'
   },
   {
     id: 'coloring',
     name: 'Coloring',
-    imageUrl: 'https://picsum.photos/seed/category-coloring/400/500',
+    imageUrl: 'https://picsum.photos/seed/category-coloring/400/400',
     imageHint: 'hair dye brush'
   },
   {
     id: 'barbering',
     name: 'Barbering',
-    imageUrl: 'https://picsum.photos/seed/category-barber/400/500',
+    imageUrl: 'https://picsum.photos/seed/category-barber/400/400',
     imageHint: 'barber tools'
   },
   {
     id: 'beauty',
     name: 'Beauty',
-    imageUrl: 'https://picsum.photos/seed/category-beauty/400/500',
+    imageUrl: 'https://picsum.photos/seed/category-beauty/400/400',
     imageHint: 'makeup brushes'
+  },
+  {
+    id: 'skin',
+    name: 'Skin Care',
+    imageUrl: 'https://picsum.photos/seed/category-skin/400/400',
+    imageHint: 'facial cream'
+  },
+  {
+    id: 'nails',
+    name: 'Nails',
+    imageUrl: 'https://picsum.photos/seed/category-nails/400/400',
+    imageHint: 'nail polish'
+  },
+  {
+    id: 'waxing',
+    name: 'Waxing',
+    imageUrl: 'https://picsum.photos/seed/category-waxing/400/400',
+    imageHint: 'hot wax'
+  },
+  {
+    id: 'makeup',
+    name: 'Makeup',
+    imageUrl: 'https://picsum.photos/seed/category-makeup/400/400',
+    imageHint: 'makeup palette'
+  },
+  {
+    id: 'bridal',
+    name: 'Bridal',
+    imageUrl: 'https://picsum.photos/seed/category-bridal/400/400',
+    imageHint: 'wedding dress'
+  },
+  {
+    id: 'treatments',
+    name: 'Treatments',
+    imageUrl: 'https://picsum.photos/seed/category-treatments/400/400',
+    imageHint: 'oil bottle'
   }
 ];
 
