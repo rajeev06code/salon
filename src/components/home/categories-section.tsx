@@ -35,7 +35,7 @@ const ServiceCard = ({ service }: { service: Service }) => (
             </div>
             <CardFooter className="p-0 mt-4 flex justify-between items-center">
                 <div>
-                    <span className="font-semibold text-2xl text-primary">${service.price}</span>
+                    <span className="font-semibold text-2xl text-primary">₹{service.price}</span>
                     <span className="text-sm text-muted-foreground ml-2">/ {service.duration} min</span>
                 </div>
                 <BookingModal>
@@ -67,31 +67,35 @@ export default function CategoriesSection() {
             Find the perfect treatment to elevate your style.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-3 sm:grid-cols-5 gap-y-8 gap-x-4 justify-items-center">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="group flex flex-col items-center gap-2 cursor-pointer"
-              onClick={() => setSelectedCategory(category)}
-            >
-              <div
-                className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-primary/50"
-              >
-                <Image
-                  src={category.imageUrl}
-                  alt={category.name}
-                  data-ai-hint={category.imageHint}
-                  width={96}
-                  height={96}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/40"></div>
-              </div>
-               <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors">
-                  {category.name}
-                </h3>
-            </div>
-          ))}
+        <div className="mt-12">
+            <ScrollArea className="w-full">
+                <div className="flex gap-x-4 pb-4 justify-start sm:grid sm:grid-cols-5 sm:gap-y-8 sm:justify-items-center">
+                    {categories.map((category) => (
+                        <div
+                        key={category.id}
+                        className="group flex flex-col items-center gap-2 cursor-pointer flex-shrink-0 w-24 sm:w-auto"
+                        onClick={() => setSelectedCategory(category)}
+                        >
+                        <div
+                            className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-primary/50"
+                        >
+                            <Image
+                            src={category.imageUrl}
+                            alt={category.name}
+                            data-ai-hint={category.imageHint}
+                            width={96}
+                            height={96}
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/40"></div>
+                        </div>
+                        <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors">
+                            {category.name}
+                            </h3>
+                        </div>
+                    ))}
+                </div>
+            </ScrollArea>
         </div>
 
         <Dialog
