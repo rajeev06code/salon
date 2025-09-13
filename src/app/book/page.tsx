@@ -99,7 +99,7 @@ export default function BookingPage() {
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Select a stylist" />
-                          </Trigger>
+                          </SelectTrigger>
                         </FormControl>
                         <SelectContent>
                            <SelectItem value="any">Any Available</SelectItem>
