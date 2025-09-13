@@ -81,6 +81,15 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
       </DialogTrigger>
       <DialogContent className="max-w-4xl p-0">
         <div className="grid md:grid-cols-2">
+            <div className="relative h-64 md:h-auto order-first">
+                <Image 
+                    src="https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg"
+                    alt="Woman receiving beauty treatment"
+                    data-ai-hint="facial treatment"
+                    fill
+                    className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                />
+            </div>
             <div className="p-8">
                 <DialogHeader>
                 <DialogTitle className="font-headline text-3xl text-primary">Book Your Appointment</DialogTitle>
@@ -92,7 +101,7 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
                 <div className="mt-6">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <FormField
                         control={form.control}
                         name="service"
@@ -136,7 +145,7 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <FormField
                         control={form.control}
                         name="date"
@@ -200,7 +209,7 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
                         />
                     </div>
                     
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <FormField
                             control={form.control}
                             name="name"
@@ -234,15 +243,6 @@ export default function BookingModal({ children, open, onOpenChange }: BookingMo
                     </form>
                 </Form>
                 </div>
-            </div>
-            <div className="relative hidden md:block">
-                <Image 
-                    src="https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg"
-                    alt="Woman receiving beauty treatment"
-                    data-ai-hint="facial treatment"
-                    fill
-                    className="object-cover rounded-r-lg"
-                />
             </div>
         </div>
       </DialogContent>
