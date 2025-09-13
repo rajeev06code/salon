@@ -18,10 +18,10 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent"></div>
         </div>
       <div className="container relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-end px-4 pb-16 text-center sm:pb-24">
-        <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl">
+        <h1 className="font-headline text-5xl font-bold tracking-tight text-white sm:text-7xl md:text-8xl" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
           Where Style is Golden
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80 sm:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 sm:text-xl" style={{ textShadow: '0 2px 5px rgba(0,0,0,0.5)' }}>
           Experience the art of grooming and beauty, tailored to you. A premium salon experience that leaves you looking and feeling your best.
         </p>
         <div className="mt-8">
