@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { stylists } from '@/lib/data';
@@ -65,7 +66,7 @@ export default function StylistsSection() {
                 </Carousel>
             </div>
 
-            {/* 2-Row Carousel for Desktop */}
+            {/* 3-Column Carousel for Desktop */}
             <div className="hidden md:block">
                 <Carousel
                     opts={{
@@ -74,9 +75,9 @@ export default function StylistsSection() {
                     }}
                     className="w-full"
                     >
-                    <CarouselContent className="-ml-1">
+                    <CarouselContent className="-ml-2">
                         {stylists.map((stylist) => (
-                            <CarouselItem key={stylist.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={stylist.id} className="pl-2 md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                      <Link href={`#${stylist.id}`} className="group block h-full">
                                         <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
