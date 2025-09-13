@@ -49,13 +49,13 @@ export default function StylistsSection() {
           ))}
         </div>
 
-        <div className="mt-24 space-y-24">
+        {/* <div className="mt-24 space-y-24">
             {stylists.map(stylist => (
                 <div id={stylist.id} key={stylist.id} className="scroll-mt-24">
                     <StylistDetails stylist={stylist} />
                 </div>
             ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
