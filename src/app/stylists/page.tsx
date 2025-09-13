@@ -25,7 +25,7 @@ export default function StylistsPage() {
 
         <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {stylists.map((stylist) => (
-            <Link key={stylist.id} href={`/stylists/${stylist.slug}`} className="group block">
+            <Link key={stylist.id} href={`/#${stylist.id}`} className="group block">
               <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
                  <div className="relative h-96 w-full">
                   <Image
