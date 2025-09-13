@@ -87,7 +87,6 @@ export default async function StylistDetails({ stylist }: { stylist: Stylist }) 
           </div>
           
           <div className="md:col-span-2 space-y-8">
-            <BioDisplay stylist={stylist} />
             
             <Card>
                 <CardHeader>
