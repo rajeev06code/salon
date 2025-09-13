@@ -13,7 +13,7 @@ import { categories, services } from '@/lib/data';
 import type { Service } from '@/lib/types';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import { ScrollArea, ScrollBar } from '../ui/scroll-area';
+import { ScrollArea } from '../ui/scroll-area';
 import BookingModal from '../booking-modal';
 
 const ServiceCard = ({ service }: { service: Service }) => (
@@ -71,35 +71,32 @@ export default function CategoriesSection() {
         </div>
         <div className="mt-12">
             <div className="sm:hidden">
-                 <ScrollArea className="w-full whitespace-nowrap">
-                    <div className="flex w-max space-x-4 pb-4">
-                        {categories.map((category) => (
-                            <div
-                            key={category.id}
-                            className="group inline-flex flex-col items-center gap-2 cursor-pointer w-24"
-                            onClick={() => setSelectedCategory(category)}
-                            >
-                            <div
-                                className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-primary/50"
-                            >
-                                <Image
-                                src={category.imageUrl}
-                                alt={category.name}
-                                data-ai-hint={category.imageHint}
-                                width={96}
-                                height={96}
-                                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/40"></div>
-                            </div>
-                            <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors whitespace-normal">
-                                {category.name}
-                                </h3>
-                            </div>
-                        ))}
-                    </div>
-                    <ScrollBar orientation="horizontal" />
-                </ScrollArea>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+                    {categories.map((category) => (
+                        <div
+                        key={category.id}
+                        className="group flex flex-col items-center gap-2 cursor-pointer w-auto"
+                        onClick={() => setSelectedCategory(category)}
+                        >
+                        <div
+                            className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-primary/50"
+                        >
+                            <Image
+                            src={category.imageUrl}
+                            alt={category.name}
+                            data-ai-hint={category.imageHint}
+                            width={96}
+                            height={96}
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/40"></div>
+                        </div>
+                        <h3 className="font-headline text-lg font-semibold text-foreground text-center group-hover:text-primary transition-colors whitespace-normal">
+                            {category.name}
+                            </h3>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="hidden sm:grid sm:grid-cols-5 sm:gap-y-8 sm:justify-items-center">
                  {categories.map((category) => (
@@ -154,5 +151,6 @@ export default function CategoriesSection() {
     </section>
   );
 }
+
 
 
