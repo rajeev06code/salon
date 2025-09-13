@@ -184,7 +184,7 @@ export default function BookingPage() {
                       <FormItem>
                         <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} />
+                          <Input placeholder="John Doe" {...field} className="px-4" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -197,7 +197,7 @@ export default function BookingPage() {
                       <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                          <Input placeholder="(123) 456-7890" {...field} />
+                          <Input placeholder="(123) 456-7890" {...field} className="px-4" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
