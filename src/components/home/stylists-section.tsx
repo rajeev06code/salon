@@ -7,11 +7,6 @@ import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
 
 export default function StylistsSection() {
-    const stylistPairs = [];
-    for (let i = 0; i < stylists.length; i += 2) {
-        stylistPairs.push(stylists.slice(i, i + 2));
-    }
-
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -32,37 +27,35 @@ export default function StylistsSection() {
                 className="w-full"
             >
                 <CarouselContent>
-                {stylistPairs.map((pair, index) => (
-                    <CarouselItem key={index} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                        <div className="flex flex-col gap-4 p-1">
-                            {pair.map(stylist => (
-                                 <Link key={stylist.id} href={`#${stylist.id}`} className="group block">
-                                    <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-                                        <div className="relative h-64 w-full">
-                                        <Image
-                                            src={stylist.imageUrl}
-                                            alt={stylist.name}
-                                            data-ai-hint={stylist.imageHint}
-                                            fill
-                                            className="object-cover"
-                                        />
+                {stylists.map((stylist) => (
+                    <CarouselItem key={stylist.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                        <div className="p-1">
+                            <Link href={`#${stylist.id}`} className="group block">
+                                <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div className="relative h-80 w-full">
+                                    <Image
+                                        src={stylist.imageUrl}
+                                        alt={stylist.name}
+                                        data-ai-hint={stylist.imageHint}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    </div>
+                                    <CardHeader className="text-center p-4">
+                                        <CardTitle className="font-headline text-xl">{stylist.name}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="flex-grow text-center px-4 pb-2">
+                                        <div className="flex flex-wrap justify-center gap-1">
+                                            {stylist.specialties.map((spec) => (
+                                            <Badge key={spec} variant="secondary" className="text-xs">{spec}</Badge>
+                                            ))}
                                         </div>
-                                        <CardHeader className="text-center p-4">
-                                            <CardTitle className="font-headline text-xl">{stylist.name}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent className="flex-grow text-center px-4 pb-2">
-                                            <div className="flex flex-wrap justify-center gap-1">
-                                                {stylist.specialties.map((spec) => (
-                                                <Badge key={spec} variant="secondary" className="text-xs">{spec}</Badge>
-                                                ))}
-                                            </div>
-                                        </CardContent>
-                                        <CardFooter className="p-4">
-                                            <Button variant="outline" className="w-full">View Profile</Button>
-                                        </CardFooter>
-                                    </Card>
-                                </Link>
-                            ))}
+                                    </CardContent>
+                                    <CardFooter className="p-4">
+                                        <Button variant="outline" className="w-full">View Profile</Button>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
                         </div>
                     </CarouselItem>
                 ))}
