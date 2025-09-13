@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/#services', label: 'Services' },
   { href: '/#stylists', label: 'Stylists' },
   { href: '/#memberships', label: 'Memberships' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 const NavLink = ({ href, label, className, onClick }: { href: string; label: string; className?: string, onClick?: () => void; }) => (
@@ -32,7 +31,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center justify-between">
+      <div className="container flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
         
         <nav className="hidden items-center gap-6 md:flex">
