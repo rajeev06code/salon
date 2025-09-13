@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A stylish and modern salon interior.",
+      "imageUrl": "https://picsum.photos/seed/salon-interior/1200/400",
+      "imageHint": "salon interior"
+    },
+    {
+      "id": "stylist-1",
+      "description": "Professional headshot of stylist Olivia Chen.",
+      "imageUrl": "https://picsum.photos/seed/olivia-chen/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "stylist-2",
+      "description": "Professional headshot of stylist Marcus Reid.",
+      "imageUrl": "https://picsum.photos/seed/marcus-reid/400/400",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "stylist-3",
+      "description": "Professional headshot of stylist Isabella Garcia.",
+      "imageUrl": "https://picsum.photos/seed/isabella-garcia/400/400",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "stylist-4",
+      "description": "Professional headshot of stylist Liam Johnson.",
+      "imageUrl": "https://picsum.photos/seed/liam-johnson/400/400",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "service-women-haircut",
+      "description": "A woman getting a stylish haircut.",
+      "imageUrl": "https://picsum.photos/seed/women-haircut/600/400",
+      "imageHint": "woman haircut"
+    },
+    {
+      "id": "service-men-haircut",
+      "description": "A man getting a sharp, modern haircut.",
+      "imageUrl": "https://picsum.photos/seed/men-haircut/600/400",
+      "imageHint": "man haircut"
+    },
+    {
+      "id": "service-hair-coloring",
+      "description": "Hair coloring process in a salon.",
+      "imageUrl": "https://picsum.photos/seed/hair-coloring/600/400",
+      "imageHint": "hair coloring"
+    },
+    {
+      "id": "service-beard-trim",
+      "description": "A barber carefully trimming a client's beard.",
+      "imageUrl": "https://picsum.photos/seed/beard-trim/600/400",
+      "imageHint": "beard trim"
+    },
+    {
+      "id": "service-manicure",
+      "description": "A client receiving a professional manicure.",
+      "imageUrl": "https://picsum.photos/seed/manicure-service/600/400",
+      "imageHint": "manicure nails"
+    },
+    {
+      "id": "service-facial",
+      "description": "A person relaxing while receiving a facial treatment.",
+      "imageUrl": "https://picsum.photos/seed/facial-treatment/600/400",
+      "imageHint": "facial treatment"
+    },
+    {
+      "id": "blog-1",
+      "description": "Various hair care products on a shelf.",
+      "imageUrl": "https://picsum.photos/seed/hair-products/600/400",
+      "imageHint": "hair products"
+    },
+    {
+      "id": "blog-2",
+      "description": "A seasonal style guide visual.",
+      "imageUrl": "https://picsum.photos/seed/seasonal-style/600/400",
+      "imageHint": "fashion style"
+    },
+    {
+      "id": "blog-3",
+      "description": "A visual representing skin care.",
+      "imageUrl": "https://picsum.photos/seed/skin-care/600/400",
+      "imageHint": "skin care"
+    }
+  ]
 }

@@ -1,0 +1,197 @@
+import { type Stylist, type Service, type Review } from '@/lib/types';
+
+export const reviews: Review[] = [
+  {
+    id: 'review-1',
+    author: 'Emily R.',
+    rating: 5,
+    review:
+      "Olivia is a miracle worker! She knew exactly what I wanted even when I didn't. I've never felt more confident with my hair.",
+  },
+  {
+    id: 'review-2',
+    author: 'David L.',
+    rating: 5,
+    review:
+      'Marcus consistently delivers the sharpest fades. The attention to detail is unmatched. Best barber in town, hands down.',
+  },
+  {
+    id: 'review-3',
+    author: 'Sophia T.',
+    rating: 5,
+    review:
+      'I went to Isabella for a balayage and the result was stunning. She is a true artist with color. The salon itself is beautiful and relaxing.',
+  },
+  {
+    id: 'review-4',
+    author: 'Michael B.',
+    rating: 4,
+    review:
+      "Great cut from Liam. The online booking was super easy and I didn't have to wait at all. Very professional service.",
+  },
+  {
+    id: 'review-5',
+    author: 'Jessica H.',
+    rating: 5,
+    review:
+      'The whole experience was premium from start to finish. My stylist was attentive and the results were fantastic. Worth every penny.',
+  },
+];
+
+export const stylists: Stylist[] = [
+  {
+    id: 'stylist-1',
+    slug: 'olivia-chen',
+    name: 'Olivia Chen',
+    specialties: ['Creative Coloring', 'Modern Cuts', 'Bridal Updos'],
+    experience: '10 years of transforming hair with artistry and passion.',
+    bio: 'With a decade of experience, Olivia is a master of her craft, specializing in vibrant, creative color and chic, modern hairstyles. Her passion is helping clients express their personality through their hair, leaving them feeling beautiful and confident.',
+    imageUrl: 'https://picsum.photos/seed/olivia-chen/400/400',
+    imageHint: 'professional portrait',
+    reviews: [
+      reviews[0],
+      {
+        id: 'review-6',
+        author: 'Chloe G.',
+        rating: 5,
+        review:
+          'Olivia transformed my hair from dull to dazzling! Her color work is pure magic.',
+      },
+    ],
+  },
+  {
+    id: 'stylist-2',
+    slug: 'marcus-reid',
+    name: 'Marcus Reid',
+    specialties: ['Classic Barbering', 'Beard Sculpting', 'Hot Towel Shaves'],
+    experience: "8 years of perfecting the art of men's grooming.",
+    bio: 'Marcus is a traditional barber with a modern edge. He excels in classic cuts, precision fades, and expert beard sculpting. For Marcus, grooming is an art form and a ritual, ensuring every client leaves looking sharp and feeling refreshed.',
+    imageUrl: 'https://picsum.photos/seed/marcus-reid/400/400',
+    imageHint: 'male portrait',
+    reviews: [
+      reviews[1],
+      {
+        id: 'review-7',
+        author: 'Ben S.',
+        rating: 5,
+        review:
+          'If you need a perfect beard trim, Marcus is the guy. Meticulous and skilled.',
+      },
+    ],
+  },
+  {
+    id: 'stylist-3',
+    slug: 'isabella-garcia',
+    name: 'Isabella Garcia',
+    specialties: ['Balayage & Highlights', 'Long Hair Styling', 'Keratin Treatments'],
+    experience: '7 years creating sun-kissed looks and healthy, flowing hair.',
+    bio: "Isabella's specialty is creating natural, dimensional color that looks effortlessly beautiful. From subtle highlights to dramatic balayage, she has a keen eye for what complements her clients' features, all while prioritizing hair health.",
+    imageUrl: 'https://picsum.photos/seed/isabella-garcia/400/400',
+    imageHint: 'woman smiling',
+    reviews: [reviews[2]],
+  },
+  {
+    id: 'stylist-4',
+    slug: 'liam-johnson',
+    name: 'Liam Johnson',
+    specialties: ["Men's Scissor Cuts", 'Styling Consultation', 'Grey Blending'],
+    experience: '12 years of experience in both salon and barbershop environments.',
+    bio: "A versatile and experienced stylist, Liam is comfortable with all hair types and styles. He is particularly skilled in men's scissor cuts and provides excellent consultations to help clients find their perfect, low-maintenance look.",
+    imageUrl: 'https://picsum.photos/seed/liam-johnson/400/400',
+    imageHint: 'professional man',
+    reviews: [reviews[3]],
+  },
+];
+
+export const services: Service[] = [
+  {
+    id: 'service-1',
+    name: "Women's Haircut & Style",
+    description: 'A customized haircut followed by a professional blowout and style.',
+    price: 85,
+    duration: 60,
+    category: 'women',
+    imageUrl: 'https://picsum.photos/seed/women-haircut/600/400',
+    imageHint: 'woman haircut',
+  },
+  {
+    id: 'service-2',
+    name: "Men's Premium Cut",
+    description: 'Precision haircut, shampoo, scalp massage, and style.',
+    price: 50,
+    duration: 45,
+    category: 'men',
+    imageUrl: 'https://picsum.photos/seed/men-haircut/600/400',
+    imageHint: 'man haircut',
+  },
+  {
+    id: 'service-3',
+    name: 'Full Balayage',
+    description: 'Hand-painted highlights for a natural, sun-kissed look.',
+    price: 250,
+    duration: 180,
+    category: 'women',
+    imageUrl: 'https://picsum.photos/seed/hair-coloring/600/400',
+    imageHint: 'hair coloring',
+  },
+  {
+    id: 'service-4',
+    name: 'Beard Sculpting & Trim',
+    description: 'Expert shaping and trimming of your beard, finished with beard oil.',
+    price: 35,
+    duration: 30,
+    category: 'men',
+    imageUrl: 'https://picsum.photos/seed/beard-trim/600/400',
+    imageHint: 'beard trim',
+  },
+  {
+    id: 'service-5',
+    name: 'Luxury Manicure',
+    description: 'Includes nail shaping, cuticle care, massage, and polish.',
+    price: 40,
+    duration: 45,
+    category: 'unisex',
+    imageUrl: 'https://picsum.photos/seed/manicure-service/600/400',
+    imageHint: 'manicure nails',
+  },
+  {
+    id: 'service-6',
+    name: 'Rejuvenating Facial',
+    description: 'A custom facial treatment to cleanse, exfoliate, and nourish your skin.',
+    price: 120,
+    duration: 60,
+    category: 'unisex',
+    imageUrl: 'https://picsum.photos/seed/facial-treatment/600/400',
+    imageHint: 'facial treatment',
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: '5 Tips for Healthier, Shinier Hair',
+    date: 'October 26, 2023',
+    excerpt: 'Discover our stylists\' top secrets to maintaining salon-quality hair at home...',
+    imageUrl: 'https://picsum.photos/seed/hair-products/600/400',
+    imageHint: 'hair products',
+    slug: '/blog/healthier-hair-tips',
+  },
+  {
+    id: 2,
+    title: 'The Ultimate Guide to Beard Care',
+    date: 'October 22, 2023',
+    excerpt: 'From oils to balms, learn how to keep your beard looking its absolute best...',
+    imageUrl: 'https://picsum.photos/seed/beard-trim/600/400',
+    imageHint: 'beard trim',
+    slug: '/blog/beard-care-guide',
+  },
+  {
+    id: 3,
+    title: 'Fall 2023 Hair Color Trends',
+    date: 'October 15, 2023',
+    excerpt: 'Thinking of a new look for the season? Here are the hottest color trends...',
+    imageUrl: 'https://picsum.photos/seed/seasonal-style/600/400',
+    imageHint: 'fashion style',
+    slug: '/blog/fall-color-trends',
+  },
+];
