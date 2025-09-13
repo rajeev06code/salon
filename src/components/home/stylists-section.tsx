@@ -4,9 +4,14 @@ import { stylists } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import StylistDetails from './stylist-details';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
 
 export default function StylistsSection() {
+    const stylistPairs = [];
+    for (let i = 0; i < stylists.length; i += 2) {
+        stylistPairs.push(stylists.slice(i, i + 2));
+    }
+
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,44 +23,54 @@ export default function StylistsSection() {
             The talent behind the transformations.
           </p>
         </div>
-        <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {stylists.map((stylist) => (
-            <Link key={stylist.id} href={`#${stylist.id}`} className="group block">
-              <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-                 <div className="relative h-96 w-full">
-                  <Image
-                    src={stylist.imageUrl}
-                    alt={stylist.name}
-                    data-ai-hint={stylist.imageHint}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader className="text-center">
-                  <CardTitle className="font-headline text-2xl">{stylist.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow text-center">
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {stylist.specialties.map((spec) => (
-                      <Badge key={spec} variant="secondary">{spec}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="outline" className="w-full">View Profile</Button>
-                </CardFooter>
-              </Card>
-            </Link>
-          ))}
+        <div className="mt-12">
+           <Carousel
+                opts={{
+                align: "start",
+                dragFree: true,
+                }}
+                className="w-full"
+            >
+                <CarouselContent>
+                {stylistPairs.map((pair, index) => (
+                    <CarouselItem key={index} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                        <div className="flex flex-col gap-4 p-1">
+                            {pair.map(stylist => (
+                                 <Link key={stylist.id} href={`#${stylist.id}`} className="group block">
+                                    <Card className="h-full flex flex-col overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                        <div className="relative h-64 w-full">
+                                        <Image
+                                            src={stylist.imageUrl}
+                                            alt={stylist.name}
+                                            data-ai-hint={stylist.imageHint}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        </div>
+                                        <CardHeader className="text-center p-4">
+                                            <CardTitle className="font-headline text-xl">{stylist.name}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow text-center px-4 pb-2">
+                                            <div className="flex flex-wrap justify-center gap-1">
+                                                {stylist.specialties.map((spec) => (
+                                                <Badge key={spec} variant="secondary" className="text-xs">{spec}</Badge>
+                                                ))}
+                                            </div>
+                                        </CardContent>
+                                        <CardFooter className="p-4">
+                                            <Button variant="outline" className="w-full">View Profile</Button>
+                                        </CardFooter>
+                                    </Card>
+                                </Link>
+                            ))}
+                        </div>
+                    </CarouselItem>
+                ))}
+                </CarouselContent>
+                <CarouselPrevious className="-left-4 hidden md:flex" />
+                <CarouselNext className="-right-4 hidden md:flex" />
+            </Carousel>
         </div>
-
-        {/* <div className="mt-24 space-y-24">
-            {stylists.map(stylist => (
-                <div id={stylist.id} key={stylist.id} className="scroll-mt-24">
-                    <StylistDetails stylist={stylist} />
-                </div>
-            ))}
-        </div> */}
       </div>
     </section>
   );
