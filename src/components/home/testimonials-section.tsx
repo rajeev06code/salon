@@ -1,3 +1,4 @@
+
 import { reviews } from '@/lib/data';
 import {
   Carousel,
@@ -44,7 +45,7 @@ export default function TestimonialsSection() {
           >
             <CarouselContent>
               {reviews.map((review) => (
-                <CarouselItem key={review.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={review.id} className="basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <Card className="h-full">
                       <CardContent className="flex flex-col items-start justify-between h-full p-6">
