@@ -3,6 +3,7 @@ import { Phone, Mail } from 'lucide-react';
 import Logo from './logo';
 import { Button } from './ui/button';
 import WhatsAppIcon from './icons/whatsapp-icon';
+import BookingModal from './booking-modal';
 
 const Footer = () => {
   return (
@@ -20,8 +21,12 @@ const Footer = () => {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
               <li><Link href="/stylists" className="text-muted-foreground hover:text-primary">Our Stylists</Link></li>
-               <li><Link href="/memberships" className="text-muted-foreground hover:text-primary">Memberships</Link></li>
-              <li><Link href="/book" className="text-muted-foreground hover:text-primary">Book an Appointment</Link></li>
+              <li><Link href="/#memberships" className="text-muted-foreground hover:text-primary">Memberships</Link></li>
+              <li>
+                <BookingModal>
+                   <button className="text-muted-foreground hover:text-primary text-sm">Book an Appointment</button>
+                </BookingModal>
+              </li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
             </ul>
           </div>

@@ -6,6 +6,7 @@ import TestimonialsSection from '@/components/home/testimonials-section';
 import CtaSection from '@/components/home/cta-section';
 import BlogSection from '@/components/home/blog-section';
 import CategoriesSection from '@/components/home/categories-section';
+import MembershipsSection from '@/components/home/memberships-section';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesSection />
       <WhyChooseUsSection />
       <StylistsSection />
+      <MembershipsSection />
       <TestimonialsSection />
       <BlogSection />
       <CtaSection />

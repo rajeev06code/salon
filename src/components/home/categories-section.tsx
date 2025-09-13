@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   Dialog,
   DialogContent,
@@ -14,6 +13,7 @@ import type { Service } from '@/lib/types';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { ScrollArea } from '../ui/scroll-area';
+import BookingModal from '../booking-modal';
 
 const ServiceCard = ({ service }: { service: Service }) => (
     <Card id={service.id} className="flex flex-col md:flex-row overflow-hidden transition-all hover:shadow-lg bg-secondary">
@@ -38,9 +38,9 @@ const ServiceCard = ({ service }: { service: Service }) => (
                     <span className="font-semibold text-2xl text-primary">${service.price}</span>
                     <span className="text-sm text-muted-foreground ml-2">/ {service.duration} min</span>
                 </div>
-                <Button asChild>
-                    <Link href="/book">Book Now</Link>
-                </Button>
+                <BookingModal>
+                  <Button>Book Now</Button>
+                </BookingModal>
             </CardFooter>
         </div>
   </Card>

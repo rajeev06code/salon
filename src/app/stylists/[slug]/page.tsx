@@ -3,11 +3,11 @@ import { notFound } from 'next/navigation';
 import { stylists } from '@/lib/data';
 import { summarizeCustomerFeedback } from '@/ai/flows/summarize-customer-feedback';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Star, StarHalf, Calendar, Briefcase } from 'lucide-react';
 import BioGenerator from '@/components/stylists/bio-generator';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import BookingModal from '@/components/booking-modal';
 
 export async function generateStaticParams() {
     return stylists.map((stylist) => ({
@@ -109,9 +109,9 @@ export default async function StylistProfilePage({ params }: { params: { slug: s
                 </div>
               </CardContent>
               <CardFooter>
-                <Button size="lg" className="w-full" asChild>
-                    <Link href="/book">Book with {stylist.name.split(' ')[0]}</Link>
-                </Button>
+                 <BookingModal>
+                    <Button size="lg" className="w-full">Book with {stylist.name.split(' ')[0]}</Button>
+                </BookingModal>
               </CardFooter>
             </Card>
           </div>

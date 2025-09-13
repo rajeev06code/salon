@@ -7,11 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Logo from './logo';
 import { cn } from '@/lib/utils';
+import BookingModal from './booking-modal';
 
 const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/stylists', label: 'Stylists' },
-  { href: '/memberships', label: 'Memberships' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -28,6 +28,7 @@ const NavLink = ({ href, label, className, onClick }: { href: string; label: str
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isBookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -41,9 +42,11 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden sm:inline-flex">
-            <Link href="/book">Book Now</Link>
-          </Button>
+           <BookingModal open={isBookingModalOpen} onOpenChange={setBookingModalOpen}>
+             <Button asChild className="hidden sm:inline-flex">
+              <span>Book Now</span>
+            </Button>
+          </BookingModal>
           
           <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -61,8 +64,8 @@ export default function Header() {
                   {navLinks.map((link) => (
                     <NavLink key={link.href} {...link} onClick={() => setMenuOpen(false)} />
                   ))}
-                  <Button asChild className="w-full">
-                    <Link href="/book" onClick={() => setMenuOpen(false)}>Book Now</Link>
+                  <Button asChild className="w-full" onClick={() => { setBookingModalOpen(true); setMenuOpen(false); }}>
+                    <span>Book Now</span>
                   </Button>
                 </nav>
               </div>

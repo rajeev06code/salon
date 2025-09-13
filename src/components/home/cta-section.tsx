@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import BookingModal from '../booking-modal';
 
 export default function CtaSection() {
   return (
@@ -12,9 +13,9 @@ export default function CtaSection() {
           Book your appointment today and discover the Gilded Mane difference. We can&apos;t wait to welcome you.
         </p>
         <div className="mt-8">
-          <Button size="lg" variant="secondary" asChild>
-            <Link href="/book">Book Now</Link>
-          </Button>
+          <BookingModal>
+            <Button size="lg" variant="secondary">Book Now</Button>
+          </BookingModal>
         </div>
       </div>
     </section>

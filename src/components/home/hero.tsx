@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import BookingModal from '../booking-modal';
 
 export default function Hero() {
   return (
@@ -25,9 +25,9 @@ export default function Hero() {
           Experience the art of grooming and beauty, tailored to you. A premium salon experience that leaves you looking and feeling your best.
         </p>
         <div className="mt-8">
-          <Button size="lg" asChild>
-            <Link href="/book">Book Your Appointment</Link>
-          </Button>
+           <BookingModal>
+            <Button size="lg">Book Your Appointment</Button>
+          </BookingModal>
         </div>
       </div>
     </section>

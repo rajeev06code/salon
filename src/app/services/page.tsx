@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import BookingModal from '@/components/booking-modal';
 
 export const metadata = {
   title: 'Our Services | Gilded Mane',
@@ -33,9 +33,9 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => (
                     <span className="font-semibold text-2xl text-primary">${service.price}</span>
                     <span className="text-sm text-muted-foreground ml-2">/ {service.duration} min</span>
                 </div>
-                <Button asChild>
-                    <Link href="/book">Book Now</Link>
-                </Button>
+                <BookingModal>
+                    <Button>Book Now</Button>
+                </BookingModal>
             </CardFooter>
         </div>
   </Card>
